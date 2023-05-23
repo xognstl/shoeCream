@@ -1,4 +1,4 @@
-package shoecream.service;
+package shoecream.service.user;
 
 import org.springframework.stereotype.Service;
 import shoecream.domain.User;
@@ -8,5 +8,5 @@ import java.util.Map;
 
 @Service
 public interface UserService {
-    public Map<String, User> create(UserVO vo);
+    Map<String, User> create(UserVO vo);
 }

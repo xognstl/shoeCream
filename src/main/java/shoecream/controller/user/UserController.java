@@ -1,19 +1,20 @@
 package shoecream.controller.user;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import shoecream.domain.User;
-import shoecream.service.UserService;
+import shoecream.service.user.UserService;
 import shoecream.vo.UserVO;
 
 import java.util.Map;
 
 @RestController
+@Slf4j
 public class UserController {
+
     private final UserService service;
 
-    @Autowired
     public UserController(UserService service){
         this.service = service;
     }
